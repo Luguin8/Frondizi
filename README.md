@@ -28,15 +28,6 @@ Sitio web one-page para Frondizi, diseñado para mostrar información de manera 
 └── js/              # Scripts adicionales
 ```
 
-## 🔧 Instalación
-
-1. Clona este repositorio:
-```bash
-git clone https://github.com/Luguin8/Frondizi.git
-```
-
-2. Abre el archivo `index.html` en tu navegador preferido.
-
 ## 🖥️ Uso
 
 El sitio está diseñado para ser intuitivo y fácil de navegar. Los usuarios pueden desplazarse por la página para acceder a diferentes secciones de contenido.

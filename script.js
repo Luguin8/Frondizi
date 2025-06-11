@@ -1,9 +1,9 @@
 // Asegurar que la página vuelva al inicio al recargar
 if (history.scrollRestoration) {
-  history.scrollRestoration = 'manual';
+  history.scrollRestoration = 'manual'; // Evita que el navegador recuerde la posición de scroll
 }
 window.onload = function() {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0); // Al cargar, vuelve al tope de la página
 }
 
 // Manejar el scroll suave con offset personalizado
@@ -32,6 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLogo = document.querySelector('.nav-logo');
   const header = document.querySelector('header');
   
+//Parallax en el header
+window.addEventListener('scroll', () => {
+  const scroll = window.scrollY;
+  const fondo = document.querySelector('.header-fondo');
+  // Parallax leve: movemos el fondo ligeramente con el scroll
+  fondo.style.transform = `translateY(${scroll * 0.3}px)`;
+});
+
   // Función para manejar el scroll del navbar
   function handleNavbarScroll() {
     if (window.scrollY > 50) {
@@ -132,5 +140,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
 });
+
+// Función para copiar el número de contacto al portapapeles
+function copiarNumero(numero) {
+  navigator.clipboard.writeText(numero).then(function() {
+    alert('Número copiado: ' + numero);
+  }, function(err) {
+    alert('No se pudo copiar el número');
+  });
+}
+
+// Lista de imágenes de fondo
+const imagenesHeader = [
+  './assets/images/WhatsApp Image 2025-06-07 at 13.42.01_2bdfcadf.jpg',
+  './assets/images/WhatsApp Image 2025-06-11 at 00.30.09_190f80cc.jpg',
+  './assets/images/WhatsApp Image 2025-06-11 at 00.30.10_c024c0e9.jpg'
+];
+
+let indiceHeader = 0;
+const fondo = document.querySelector('.header-fondo');
+
+// Cargar imagen inicial
+fondo.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imagenesHeader[0]}')`;
+
+function cambiarImagen() {
+  fondo.style.opacity = 0;
+
+  setTimeout(() => {
+    fondo.style.backgroundImage =
+      `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imagenesHeader[indiceHeader]}')`;
+    fondo.style.opacity = 1;
+  }, 500); // Tiempo en milisegundos para ocultar antes de mostrar la nueva
+}
+
+setInterval(() => {
+  indiceHeader = (indiceHeader + 1) % imagenesHeader.length;
+  cambiarImagen();
+}, 4000);

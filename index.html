@@ -1,6 +1,8 @@
+<!-- Archivo principal de la página del Club de Básquet Arturo Frondizi -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos y enlaces a estilos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Pagina Oficial del Club de Basquet Arturo Frondizi" />
@@ -10,14 +12,18 @@
     <title>Club Basquetbol Arturo Frondizi</title>
   </head>
   <body>
+    <!-- Barra de navegación principal, fija arriba -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
       <div class="container-fluid">
+        <!-- Logo del club en la navbar -->
         <a class="navbar-brand" href="#header">
           <img src="./assets/images/logo.png" alt="Logo" class="nav-logo">
         </a>
+        <!-- Botón para menú móvil -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Enlaces de navegación -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -27,20 +33,20 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#flyerModal">
-                <span class="nav-text">Próximo Evento</span>
-                <span class="nav-line"></span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#equipos">
-                <span class="nav-text">Equipos</span>
+              <a class="nav-link" href="#horarios">
+                <span class="nav-text">Horarios</span>
                 <span class="nav-line"></span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#Entrenadores">
                 <span class="nav-text">Entrenadores</span>
+                <span class="nav-line"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#equipos">
+                <span class="nav-text">Equipos</span>
                 <span class="nav-line"></span>
               </a>
             </li>
@@ -61,7 +67,9 @@
       </div>
     </nav>
 
+    <!-- Sección principal (header) con logo y nombre del club -->
     <header>
+      <div class="header-fondo"></div>
       <div class="header-container">
         <div class="header-main">
           <img class="img-header" src="./assets/images/logo.png" alt="Logo Club Frondizi" />
@@ -74,24 +82,27 @@
     </header>
 
     <main>
+      <!-- Sección sobre nosotros con texto y mapa de Google -->
       <section id="sobre-nosotros">
         <h3 class="section-title">Sobre nosotros</h3>
         <div class="contenedor-sobre-nosotros">
           <div class="texto-sobre-nosotros">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-              adipisci voluptatem error, voluptatum maiores, odit eos veniam tenetur
-              tempore doloribus harum deserunt assumenda? Fuga nobis in quasi animi
-              debitis quaerat quae, corporis non saepe necessitatibus illo repellat
-              provident voluptatem ab rerum officiis vel earum ex aliquam vero
-              tempora? Soluta voluptatem qui enim dolorum doloribus. Tempora
-              repudiandae expedita officia molestiae dignissimos magnam eum atque,
-              quod voluptate quas sequi ipsa. Recusandae cupiditate officia
-              repellendus quod ipsa fugit expedita eum tenetur et eius, consectetur,
-              libero sit.
+               Desde hace años trabajamos para formar no solo jugadores, sino personas comprometidas, solidarias y con amor por el deporte.
+
+En nuestras instalaciones entrenan chicos y chicas de todas las edades, desde las categorías formativas hasta juveniles y mayores. Nuestro objetivo es brindar un espacio donde cada uno pueda crecer, aprender y disfrutar del básquet en un ambiente sano, familiar y con valores.
+
+Contamos con entrenadores dedicados, infraestructura adecuada y una comunidad que acompaña. Si estás buscando un lugar para empezar o continuar tu camino en el básquet, ¡te esperamos!
             </p>
+            <div style="text-align:center; font-size:13px; color:#555; margin-top:8px;">Contactos rápidos para consultas:</div>
+            <div class="contactos-rapidos">
+              <button class="btn-copiar" onclick="copiarNumero('3795020691')">3795020691</button>
+              <button class="btn-copiar" onclick="copiarNumero('3794010311')">3794010311</button>
+              <button class="btn-copiar" onclick="copiarNumero('3794019682')">3794019682</button>
+            </div>
           </div>
           <div class="mapa-container">
+            <!-- Mapa de Google Maps con la ubicación del club -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.603796651817!2d-58.78498416248616!3d-27.450455824196005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ad84b5ff425%3A0x119a90083d6b298f!2sCLUB%20DE%20BASQUET%20ARTURO%20FRONDIZI!5e0!3m2!1ses-419!2sar!4v1749300161654!5m2!1ses-419!2sar" 
                     width="600" 
                     height="450" 
@@ -105,54 +116,165 @@
         </div>
       </section>
 
+      <!-- Nueva sección de horarios de entrenamiento -->
+      <section id="horarios">
+        <h3 class="section-title">Horarios de Entrenamiento</h3>
+        <div class="contenedor-horarios">
+          <div class="bloque-horario">
+            <div class="dias">Martes, Jueves y Sábados</div>
+            <div class="horario-card-layout">
+              <div class="titulo-vertical">Femeninas</div>
+              <div class="contenido-horario">
+                <table class="tabla-horarios">
+                  <tr><th>Categoría</th><th>Horario</th></tr>
+                  <tr><td>U15 (14 y 15 años)</td><td>19:00 a 20:00</td></tr>
+                  <tr><td>U17 (16 y 17 años)</td><td>20:00 a 21:00</td></tr>
+                  <tr><td>Sábados ambas categorías</td><td>11:00 a 12:00</td></tr>
+                </table>
+                <div class="entrenadores">Entrenan ambas categorías juntas. <b>Entrenadores: ambos</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="bloque-horario">
+            <div class="dias">Lunes, Miércoles y Viernes</div>
+            <div class="horario-card-layout">
+              <div class="titulo-vertical">Masculinas</div>
+              <div class="contenido-horario">
+                <table class="tabla-horarios">
+                  <tr><th>Categoría</th><th>Horario</th></tr>
+                  <tr><td>U15 (14 y 15 años)</td><td>20:00 a 21:00</td></tr>
+                  <tr><td>U17 (16 y 17 años)</td><td>20:00 a 21:00</td></tr>
+                  <tr><td>U19 (18 y 19 años)</td><td>21:00 a 22:00</td></tr>
+                  <tr><td>U21 (20 y 21 años)</td><td>21:00 a 22:00</td></tr>
+                </table>
+                <div class="entrenadores">Entrenan ambas categorías juntas. <b>Entrenadores: ambos</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="bloque-horario">
+            <div class="dias">Martes y Jueves</div>
+            <div class="horario-card-layout">
+              <div class="titulo-vertical">Mini Básquetbol</div>
+              <div class="contenido-horario">
+                <table class="tabla-horarios">
+                  <tr><th>Categoría</th><th>Horario</th></tr>
+                  <tr><td>Pañales (5 años)</td><td>17:00 a 18:00</td></tr>
+                  <tr><td>Mosquitos (6 y 7 años)</td><td>17:00 a 18:00</td></tr>
+                  <tr><td>Pre-mini (8 y 9 años)</td><td>18:00 a 19:00</td></tr>
+                  <tr><td>Mini (10 y 11 años)</td><td>18:00 a 19:00</td></tr>
+                  <tr><td>U-13 mixto (12 y 13 años)</td><td>19:00 a 20:00</td></tr>
+                </table>
+                <div class="entrenadores">Entrenan ambas categorías juntas. <b>Entrenadores: ambos</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de entrenadores (ahora antes que equipos) -->
+      <section id="Entrenadores">
+        <h3 class="section-title">Entrenadores</h3>
+        <div class="contenedor-entrenadores">
+          <div class="resumen">
+            <h3>Nuñez Francisco </h3>
+            <img src="./assets/images/frannunez.jpg" alt="Entrenador Francisco Nuñez" />
+            <h5> U-15 / U17 (FEMENINO)</h5>
+            <H5> U-15 / U-17 / U-21 (MASCULINO)</H5>
+            <h5>instagram: @francisco.nunhez</h5>
+            <h5>Contacto: 3794010311</h5>
+          </div>
+          <div class="resumen">
+            <h3>Gomez Ezequiel</h3>
+            <img src="./assets/images/gomezeze.jpg" alt="Entrenador ezequiel gomez" />
+            <h5>PAÑALES / MOSQUITOS </h5>
+            <h5>PRE-MINI / MINI / U-13</h5>
+            <h5>instagram: @_ezequiel.gomez.d_</h5>
+            <h5>Contacto: 3794123456</h5>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de equipos con lista de jugadores (ahora después de entrenadores) -->
       <section id="equipos">
         <h3 class="section-title">Equipos</h3>
         <div class="contenedor-equipos">
           <div class="equipos">
             <div class="principal">
-              <h4>Categoria 1</h4>
+              <h4>PAÑALES Y MOSQUITOS</h4>
               <ul class="lista-jugadores">
                 <li>Juan Pérez - Base #5</li>
                 <li>Carlos Rodríguez - Escolta #10</li>
                 <li>Miguel Ángel Santos - Alero #7</li>
                 <li>Fernando García - Ala-Pivot #15</li>
                 <li>Lucas Martínez - Pivot #23</li>
-                <li>Diego González - Base #4</li>
-                <li>Alejandro López - Escolta #11</li>
-                <li>Martín Silva - Alero #21</li>
-                <li>Pablo Morales - Ala-Pivot #33</li>
-                <li>Roberto Sánchez - Pivot #45</li>
               </ul>
             </div>
           </div>
           <div class="equipos">
             <div class="principal">
-              <h4>Equipo 2</h4>
+              <h4>PRE-MINI</h4>
+              <ul class="lista-jugadores">
+                <li>Pedro López - Base #2</li>
+                <li>Martina Ruiz - Escolta #8</li>
+                <li>Tomás Gómez - Alero #12</li>
+                <li>Valentina Torres - Ala-Pivot #14</li>
+                <li>Emilia Fernández - Pivot #20</li>
+              </ul>
             </div>
           </div>
+          <div class="equipos">
+            <div class="principal">
+              <h4>MINI</h4>
+              <ul class="lista-jugadores">
+                <li>Lucas Ramírez - Base #3</li>
+                <li>Camila Sosa - Escolta #6</li>
+                <li>Ignacio Pérez - Alero #9</li>
+                <li>Julieta Díaz - Ala-Pivot #13</li>
+                <li>Mateo Benítez - Pivot #18</li>
+              </ul>
+            </div>
+          </div>
+          <div class="equipos">
+            <div class="principal">
+              <h4>U-13</h4>
+              <ul class="lista-jugadores">
+                <li>Agustín Silva - Base #4</li>
+                <li>Lucía Romero - Escolta #7</li>
+                <li>Federico Acosta - Alero #11</li>
+                <li>Bruno Medina - Ala-Pivot #16</li>
+                <li>Sol González - Pivot #22</li>
+              </ul>
+            </div>
+          </div>
+          <div class="equipos">
+            <div class="principal">
+              <h4>U-15</h4>
+              <ul class="lista-jugadores">
+                <li>Ramiro Torres - Base #5</li>
+                <li>Milagros López - Escolta #10</li>
+                <li>Franco Duarte - Alero #17</li>
+                <li>Victoria Ríos - Ala-Pivot #21</li>
+                <li>Joaquín Vera - Pivot #25</li>
+              </ul>
+            </div>
+          </div>
+          <div class="equipos">
+            <div class="principal">
+              <h4>U-17</h4>
+              <ul class="lista-jugadores">
+                <li>Facundo Molina - Base #6</li>
+                <li>Martina Aguirre - Escolta #13</li>
+                <li>Esteban Ruiz - Alero #19</li>
+                <li>Camila Fernández - Ala-Pivot #24</li>
+                <li>Gonzalo Pérez - Pivot #30</li>
+              </ul>
+            </div>
+          </div>
+          
         </div>
       </section>
 
-      <section id="Entrenadores">
-        <h3 class="section-title">Entrenadores</h3>
-        <div class="contenedor-entrenadores">
-          <div class="resumen">
-            <h3>Juan Perez</h3>
-            <img src="./assets/images/entrenador.jpg" alt="Entrenador Juan Perez" />
-            <h5>Edad 25 años</h5>
-            <h5>instagram: @juanperez</h5>
-            <h5>Contacto: 3794123456</h5>
-          </div>
-          <div class="resumen">
-            <h3>Juan Perez</h3>
-            <img src="./assets/images/entrenador.jpg" alt="Entrenador Juan Perez" />
-            <h5>Edad 25 años</h5>
-            <h5>instagram: @juanperez</h5>
-            <h5>Contacto: 3794123456</h5>
-          </div>
-        </div>
-      </section>
-    
+      <!-- Sección de sponsors con carrusel de imágenes -->
       <section id="sponsors">
         <h3 class="section-title">Nuestros Sponsors</h3>
         <div class="sponsors-container">
@@ -243,7 +365,15 @@
             </div>
             <div class="contacto-item">
               <img src="./assets/images/phone-icon.png" alt="Teléfono">
-              <span>+54 379-4123456</span>
+              <span>+54 379-5020691</span>
+            </div>
+            <div class="contacto-item">
+              <img src="./assets/images/phone-icon.png" alt="Teléfono">
+              <span>+54 379-4019682</span>
+            </div>
+            <div class="contacto-item">
+              <img src="./assets/images/phone-icon.png" alt="Teléfono">
+              <span>+54 379-4010111</span>
             </div>
           </div>
         </div>
@@ -265,8 +395,15 @@
       </div>
     </div>
 
-    <footer>© Copyright 2025, Todos los derechos reservados | Club de Basquet Arturo Frondizi</footer>
+    <footer>
+      <span class="footer-text">
+        © Copyright 2025, Todos los derechos reservados | 
+        <span class="mobile-br"></span>
+        Club de Basquet Arturo Frondizi | LFC Labs
+      </span>
+    </footer>
     
+        
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
